@@ -24,8 +24,10 @@ public class CtoFConverter {
                 tempInC = in.nextDouble();
                 // convert from C to F
                 tempInF = (tempInC * (1.8)) + 32;
+                // output the results of the conversion
                 System.out.println("Given input of temperature: " + tempInC + " degrees C");
                 System.out.println("The converted temperature from C to F is: " + tempInF + " degrees F");
+                // set done to true to kill loop
                 done = true;
             } else {
                 // not a valid double input, output error message and loop runs
@@ -33,7 +35,7 @@ public class CtoFConverter {
                 System.out.println("You stated that the temperature was: " + trash);
                 System.out.println("Please enter a valid input of double type for temperature in C when prompted!");
             }
-
+        // if true, it will keep looping as it is invalid input, else stops with valid input
         } while (!done);
 
     }
